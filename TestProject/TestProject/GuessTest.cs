@@ -22,8 +22,13 @@ namespace TestProject {
                     shownWord += symbol;
                 } else {
                     shownWord += emptySpace;
-                }
+                }//hola//
             }
         }
-    }
+
+		public static implicit operator GuessTest(GuessTest v)
+		{
+			throw new NotImplementedException();
+		}
+	}
 }

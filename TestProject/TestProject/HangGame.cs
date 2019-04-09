@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace TestProject {
     class HangGame {
-        
-        public GuessTest guessTest;
+        //hola//
+        public GuessTest GuessTest;
 
         public HangGame () {
             Console.WriteLine ("Choose your word: ");
-            guessTest = new GuessTest (Console.ReadLine ());
+            GuessTest = new GuessTest (Console.ReadLine ());
             Console.Clear ();
-            Console.WriteLine ("Your secret word is " + guessTest.shownWord);
+            Console.WriteLine ("Your secret word is " + GuessTest.shownWord);
         }
     }
 }

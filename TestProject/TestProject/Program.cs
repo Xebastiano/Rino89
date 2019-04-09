@@ -7,13 +7,8 @@ using System.Threading.Tasks;
 namespace TestProject {
     class Program {
         static void Main (string[] args) {
+			HangGame game = new HangGame();
 
-            HangGame game = new HangGame ();
-
-            //------------------------EXIT-PARAMETERS-------------// 
-            Console.WriteLine ("Game finished...");
-            Console.ReadKey ();
-            //----------------------------------------------------// 
         }
     }
 }
