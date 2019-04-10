@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestProject {
     class Program {
-        static void Main (string[] args) {
-			HangGame game = new HangGame();
-
+        static void Main(string[] args){
+            HangGame Game = new HangGame();
         }
     }
 }
