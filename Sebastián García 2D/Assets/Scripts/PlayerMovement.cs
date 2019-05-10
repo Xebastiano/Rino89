@@ -5,11 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     public float moveSpeed = 15;
-    public Vector2 limits = new Vector2(15,3.5f);
+    public Vector2 limits = new Vector2(5,3.5f);
+    Vector2 shapeLimits { get { return limits - ((colliderSize * transform.localScale) / 2); } }
+    Vector2 colliderSize;
 
     // Start is called before the first frame update
     void Start () {
-
+        colliderSize = gameObject.GetComponent<BoxCollider2D>().size;
+        
     }
 
     // Update is called once per frame
@@ -46,8 +49,8 @@ public class PlayerMovement : MonoBehaviour {
             transform.position = temp;
         }*/
 
-        temp.x = Mathf.Clamp(transform.position.x,-limits.x,limits.x);
-        temp.y = Mathf.Clamp(transform.position.y,-limits.y,limits.y);
+        temp.x = Mathf.Clamp(transform.position.x,-shapeLimits.x,shapeLimits.x);
+        temp.y = Mathf.Clamp(transform.position.y,-shapeLimits.y,shapeLimits.y);
         transform.position = temp;
     }
 
@@ -57,6 +60,8 @@ public class PlayerMovement : MonoBehaviour {
     void OnDrawGizmos(){
         Gizmos.DrawSphere(transform.position,0.15f);
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(Vector3.zero,limits * 4);
+        Gizmos.DrawWireCube(Vector3.zero,limits * 2);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(Vector3.zero,shapeLimits * 2);
     }
 }
