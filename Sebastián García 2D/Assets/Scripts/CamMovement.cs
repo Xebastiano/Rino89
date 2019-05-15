@@ -13,13 +13,13 @@ public class CamMovement : MonoBehaviour {
     // Start is called before the first frame update
     void Start () {
         camUnitDimentions = new Vector2(Camera.main.orthographicSize * 16 / 9,Camera.main.orthographicSize);
-        limits = new Vector2(10.0f,7.0f) - camUnitDimentions;
-        GameObject foundObject = GameObject.Find("Square");
-        Debug.Log(foundObject.name);
+        limits = new Vector2(20.0f,14.0f) - camUnitDimentions;
+        //GameObject foundObject = GameObject.Find("Square");
+        //Debug.Log(foundObject.name);
     }
     
     // Update is called once per frame
-    void Update () {
+    void LateUpdate () {
         if (followTarget) {
             /*Vector3 temp = Vector3.MoveTowards (transform.position, followTarget.position, followSpeed * Time.deltaTime);
             temp.z = transform.position.z;

@@ -8,23 +8,35 @@ public class PlayerMovement : MonoBehaviour {
     public Vector2 limits = new Vector2(5,3.5f);
     Vector2 shapeLimits { get { return limits - ((colliderSize * transform.localScale) / 2); } }
     Vector2 colliderSize;
+    Rigidbody2D rb2D;
 
     // Start is called before the first frame update
     void Start () {
         colliderSize = gameObject.GetComponent<BoxCollider2D>().size;
-        
+        rb2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update () {
         //get current Horizontal Movement
         float horDirection = Input.GetAxisRaw("Horizontal");
-        Vector3 horMove = horDirection * Vector3.right;
+        Vector2 horMove = horDirection * Vector3.right;
+        //get current Vertical Movement
+        float verDirection = Input.GetAxisRaw("Vertical");
+        Vector2 verMove = verDirection * Vector3.up;
+
+        rb2D.MovePosition(rb2D.position + ((horMove + verMove).normalized * moveSpeed * Time.deltaTime));
+
+        Vector2 temp = transform.position;
+        transform.Translate ((horMove + verMove).normalized * moveSpeed * Time.deltaTime);
+        temp.x = Mathf.Clamp(transform.position.x,-shapeLimits.x,shapeLimits.x);
+        temp.y = Mathf.Clamp(transform.position.y,-shapeLimits.y,shapeLimits.y);
+        transform.position = temp;
         //posibilidad 1
         /*if(horDirection > 0){
-
+        
         }else if(horDirection < 0){
-
+        
         }*/
 
         //posibilidad2
@@ -36,22 +48,11 @@ public class PlayerMovement : MonoBehaviour {
             transform.position = temp;
         }*/
 
-        //get current Vertical Movement
-        float verDirection = Input.GetAxisRaw("Vertical");
-        Vector3 verMove = verDirection * Vector3.up;
-
-        Vector3 temp = transform.position;
-        transform.Translate ((horMove + verMove).normalized * moveSpeed * Time.deltaTime);
-
         //posibilidad3
         /*if((transform.position.x < -limits.x || transform.position.x > limits.x) ||
             (transform.position.y < -limits.y || transform.position.y > limits.y)){
             transform.position = temp;
         }*/
-
-        temp.x = Mathf.Clamp(transform.position.x,-shapeLimits.x,shapeLimits.x);
-        temp.y = Mathf.Clamp(transform.position.y,-shapeLimits.y,shapeLimits.y);
-        transform.position = temp;
     }
 
     void OnTriggerEnter2D (Collider2D other){
