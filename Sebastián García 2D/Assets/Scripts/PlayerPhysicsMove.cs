@@ -55,7 +55,8 @@ public class PlayerPhysicsMove : MonoBehaviour{
         Gizmos.DrawWireCube(Vector3.zero,limits * 2);
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireCube(Vector3.zero,shapeLimits * 2);
-        Gizmos.DrawSphere(transform.position.currentMouseWorldPos);
+        Gizmos.DrawLine(transform.position, currentMouseWorldPos);
+        Gizmos.DrawSphere(currentMouseWorldPos, 0.35f);
 
     }
 }
