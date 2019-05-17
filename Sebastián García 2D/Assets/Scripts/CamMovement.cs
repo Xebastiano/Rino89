@@ -8,6 +8,7 @@ public class CamMovement : MonoBehaviour {
     public float followSpeed;
     //Vector2 camUnitDimentions = new Vector2(8.9f,5.0f);
     Vector2 camUnitDimentions;
+    public PlayerPhysicsMove playerMovement;
     Vector2 limits;
 
     // Start is called before the first frame update
@@ -21,16 +22,26 @@ public class CamMovement : MonoBehaviour {
     // Update is called once per frame
     void LateUpdate () {
         if (followTarget) {
+
             /*Vector3 temp = Vector3.MoveTowards (transform.position, followTarget.position, followSpeed * Time.deltaTime);
             temp.z = transform.position.z;
             transform.position = temp;*/
-            Vector3 direction = (followTarget.position - transform.position).normalized;
 
-            Vector3 temp = transform.position;
-            transform.Translate(direction * followSpeed * Time.deltaTime);
-            temp.x = Mathf.Clamp(transform.position.x,-limits.x,limits.x);
-            temp.y = Mathf.Clamp(transform.position.y,-limits.y,limits.y);
+            /*Vector3 direction = (followTarget.position - transform.position).normalized;
+
+            Vector3 temp = transform.position;*/
+
+            Vector3 temp = Vector3.MoveTowards(transform.position,followTarget.position,followSpeed * Time.deltaTime);
+            temp.x = Mathf.Clamp(temp.x,-limits.x,limits.x);
+            temp.y = Mathf.Clamp(temp.y,-limits.y,limits.y);
+            temp.z = transform.position.z;
             transform.position = temp;
         }
+    }
+    void OnDrawGizmos(){
+        Gizmos.color = Color.cyan;
+        Vector2 followPos = followTarget.position;
+        Gizmos.DrawWireSphere(followPos + (playerMovement.mousePlayer)
+            
     }
 }

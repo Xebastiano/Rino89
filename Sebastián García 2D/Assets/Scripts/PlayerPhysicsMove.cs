@@ -9,7 +9,10 @@ public class PlayerPhysicsMove : MonoBehaviour{
     Vector2 colliderSize;
     Rigidbody2D rb2D;
     Vector2 currentMouseWorldPos;
-    public Vector2 mousePlayerDelta { get { return currentMouseWorldPos - rb2D.position; } }
+    public Vector2 mousePlayerDelta { get {
+            return rb2D ? Vector2.zero : curren
+        }
+    }
 
     // Start is called before the first frame update
     void Start(){
@@ -56,7 +59,7 @@ public class PlayerPhysicsMove : MonoBehaviour{
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireCube(Vector3.zero,shapeLimits * 2);
         Gizmos.DrawLine(transform.position, currentMouseWorldPos);
-        Gizmos.DrawSphere(currentMouseWorldPos, 0.35f);
+        Gizmos.DrawSphere(currentMouseWorldPos, 0.25f);
 
     }
 }
