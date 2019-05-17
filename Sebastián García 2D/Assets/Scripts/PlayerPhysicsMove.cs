@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPhysicsMove : MonoBehaviour{
+public class PlayerPhysicsMove : MonoBehaviour {
     public float moveSpeed = 15;
-    public Vector2 limits = new Vector2(5,3.5f);
-    Vector2 shapeLimits { get { return limits - ((colliderSize * transform.localScale) / 2); } }
+    public Vector2 limits = new Vector2(5, 3.5f);
     Vector2 colliderSize;
+    Vector2 shapeLimits { get { return limits - ((colliderSize * transform.localScale) / 2); } }
     Rigidbody2D rb2D;
     Vector2 currentMouseWorldPos;
+    public Vector2 current2DPos { get { return transform.position; } }
     public Vector2 mousePlayerDelta { get {
-            return rb2D ? Vector2.zero : curren
+            return !rb2D ? Vector2.zero : currentMouseWorldPos - rb2D.position;
         }
     }
+
+    public float bulletOriginDist = 1.3f;
+    public GameObject bulletPrefab;
 
     // Start is called before the first frame update
     void Start(){
@@ -45,6 +49,12 @@ public class PlayerPhysicsMove : MonoBehaviour{
 
     void Update(){
         currentMouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Input.GetMouseButtonDown(0)){
+            Debug.Log("Bang");
+            GameObject bullet = Instantiate(bulletPrefab, current2DPos + (mousePlayerDelta.normalized * bulletOriginDist), Quaternion.identity);
+            bullet.GetComponent<bulletBehaviour>().direction = mousePlayerDelta.normalized;
+        }
     }
 
     void OnGUI(){
