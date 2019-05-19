@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 504484205}
   m_Layer: 0
   m_Name: Triangle (1)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,9 +355,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1f50de7893ab24faa3a6d78ecc8eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 100
   point: {x: 0, y: 0, z: 0}
   axis: {x: 0, y: 0, z: -1}
+  lives: 3
 --- !u!61 &504484206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -559,7 +560,7 @@ GameObject:
   - component: {fileID: 878023944}
   m_Layer: 0
   m_Name: Triangle
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -664,9 +665,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1f50de7893ab24faa3a6d78ecc8eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 50
   point: {x: 0, y: 0, z: 0}
   axis: {x: 0, y: 0, z: -1}
+  lives: 3
 --- !u!1 &1744890520
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,16 +7,26 @@ public class HazardMovement : MonoBehaviour {
     public float speed = 1;
     public Vector3 point;
     public Vector3 axis = Vector3.back;
-
+    public int lives = 3;
     // Start is called before the first frame update
     void Start () {
-
+        
     }
 
     // Update is called once per frame
     void Update () {
         transform.RotateAround (point, axis, speed * Time.deltaTime);
         transform.rotation = Quaternion.identity;
+
+        if (lives == 0){
+            Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "bullet"){
+            lives = lives - 1;
+        }
     }
 
     void OnDrawGizmos () {
