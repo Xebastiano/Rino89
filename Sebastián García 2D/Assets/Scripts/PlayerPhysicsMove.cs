@@ -6,6 +6,7 @@ public class PlayerPhysicsMove : MonoBehaviour {
     public float moveSpeed = 15;
     public Vector2 limits = new Vector2(5, 3.5f);
     Vector2 colliderSize;
+    public int lives = 5;
     Vector2 shapeLimits { get { return limits - ((colliderSize * transform.localScale) / 2); } }
     Rigidbody2D rb2D;
     Vector2 currentMouseWorldPos;
@@ -55,6 +56,7 @@ public class PlayerPhysicsMove : MonoBehaviour {
             GameObject bullet = Instantiate(bulletPrefab, current2DPos + (mousePlayerDelta.normalized * bulletOriginDist), Quaternion.identity);
             bullet.GetComponent<bulletBehaviour>().direction = mousePlayerDelta.normalized;
         }
+
     }
 
     void OnGUI(){
