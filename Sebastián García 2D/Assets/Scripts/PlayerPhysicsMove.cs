@@ -19,6 +19,9 @@ public class PlayerPhysicsMove : MonoBehaviour {
     public float bulletOriginDist = 1.3f;
     public GameObject bulletPrefab;
 
+    public float cooldownTimer = 0;
+    public bool IsOnCD = false;
+
     // Start is called before the first frame update
     void Start(){
         colliderSize = gameObject.GetComponent<BoxCollider2D>().size;
@@ -51,10 +54,19 @@ public class PlayerPhysicsMove : MonoBehaviour {
     void Update(){
         currentMouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+        cooldownTimer += Time.deltaTime;
+        if(cooldownTimer >= 2)
+        {
+            cooldownTimer = 0;
+        }
+
         if (Input.GetMouseButtonDown(0)){
             Debug.Log("Bang");
             GameObject bullet = Instantiate(bulletPrefab, current2DPos + (mousePlayerDelta.normalized * bulletOriginDist), Quaternion.identity);
             bullet.GetComponent<bulletBehaviour>().direction = mousePlayerDelta.normalized;
+        }else if(IsOnCD && Input.GetMouseButton(1)) {
+            Debug.Log("Bang");
+            IsOnCD = true;
         }
 
     }

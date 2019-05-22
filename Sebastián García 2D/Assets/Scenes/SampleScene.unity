@@ -647,7 +647,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878023940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.13, y: 2.73, z: 0}
+  m_LocalPosition: {x: 2.47, y: 0.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -666,7 +666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  point: {x: 0, y: 0, z: 0}
+  point: {x: 1.24, y: -4.5, z: 0}
   axis: {x: 0, y: 0, z: -1}
   lives: 3
 --- !u!1 &1744890520
@@ -897,9 +897,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 15
   limits: {x: 20, y: 14}
+  lives: 5
   bulletOriginDist: 1.6
   bulletPrefab: {fileID: 2145993977284420713, guid: b8bac319aff05bb49a125a8e56ac8064,
     type: 3}
+  cooldownTimer: 0
+  IsOnCD: 0
 --- !u!50 &1930990793
 Rigidbody2D:
   serializedVersion: 4
