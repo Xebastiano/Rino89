@@ -55,6 +55,10 @@ public class PlayerPhysicsMove : MonoBehaviour {
             CamArea targetArea = other.GetComponent<CamArea>();
             Camera.main.GetComponent<CamMovement>().SetTempTarget(targetArea.transform,targetArea.centerSpeed,targetArea.targetSize);
         }
+        if (other.CompareTag("ExitDoor")){
+            //TODO: Change Scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene(FindObjectOfType<ObjectiveControl>().nextScene);
+        }
     }
     void OnTriggerExit2D(Collider2D other){
         if(other.CompareTag("CamArea")){
