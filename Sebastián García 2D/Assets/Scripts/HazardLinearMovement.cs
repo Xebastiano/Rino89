@@ -26,6 +26,10 @@ public class HazardLinearMovement : MonoBehaviour{
         }
     }
 
+    void OnDestroy(){
+        FindObjectOfType<ObjectiveControl>().remainingEnemies--;
+    }
+
     void Reset(){
         pathPoints = new Vector3[1];
         pathPoints[0] = transform.position;
@@ -33,17 +37,18 @@ public class HazardLinearMovement : MonoBehaviour{
 
     void OnDrawGizmos(){
         Gizmos.color = Color.green;
-        for(int i = 0; i < pathPoints.Length; i++){
-            if((i + 1) < pathPoints.Length){
-                Gizmos.DrawLine(pathPoints[i],pathPoints[i + 1]);
+        for (int i = 0; i < pathPoints.Length; i++){
+            if ((i + 1) < pathPoints.Length)
+            {
+                Gizmos.DrawLine(pathPoints[i], pathPoints[i + 1]);
             }
         }
         Gizmos.color = Color.red;
-        for(int i = 0; i < pathPoints.Length; i++){
-            Gizmos.DrawSphere(pathPoints[i],0.15f);
+        for (int i = 0; i < pathPoints.Length; i++){
+            Gizmos.DrawSphere(pathPoints[i], 0.15f);
         }
         Gizmos.color = Color.cyan;
-        Gizmos.DrawRay(transform.position,transform.up);
-        Gizmos.DrawRay(transform.position,transform.right);
+        Gizmos.DrawRay(transform.position, transform.up);
+        Gizmos.DrawRay(transform.position, transform.right);
     }
 }

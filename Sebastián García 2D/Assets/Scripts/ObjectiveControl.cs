@@ -9,12 +9,12 @@ public class ObjectiveControl : MonoBehaviour{
     public int nextScene;
 
     // Start is called before the first frame update
-    void Start(){
+    void Start (){
         remainingEnemies = GameObject.FindGameObjectsWithTag("enemy").Length;
     }
 
     // Update is called once per frame
-    void Update(){
+    void Update (){
         if (remainingEnemies <= 0 && targetWall){
             Destroy(targetWall);
         }

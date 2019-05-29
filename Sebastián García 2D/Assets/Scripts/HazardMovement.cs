@@ -28,6 +28,9 @@ public class HazardMovement : MonoBehaviour {
             lives = lives - 1;
         }
     }
+    void OnDestroy(){
+        FindObjectOfType<ObjectiveControl>().remainingEnemies--;
+    }
 
     void OnDrawGizmos () {
         Gizmos.color = Color.green;

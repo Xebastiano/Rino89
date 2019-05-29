@@ -20,7 +20,7 @@ public class CamMovement : MonoBehaviour {
     Transform tempTarget;
     float tempSpeed;
 
-    float targetOrtographicSize = 4;
+    float targetOrtographicSize = 5;
 
     // Start is called before the first frame update
     void Start () {
