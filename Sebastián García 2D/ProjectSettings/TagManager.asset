@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - CamArea
   - ExitDoor
+  - Platform
   layers:
   - Default
   - TransparentFX
