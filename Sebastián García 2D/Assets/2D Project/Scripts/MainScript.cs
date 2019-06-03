@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MainScript : MonoBehaviour{
 
+    public Vector2 Limits = new Vector2(10, 7);
+    
 
     // Start is called before the first frame update
     void Start(){
