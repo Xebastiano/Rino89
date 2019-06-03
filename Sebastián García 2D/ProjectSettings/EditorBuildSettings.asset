@@ -11,10 +11,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/TopDown/Scenes/NextScene.unity
     guid: 8e1adccfebea46c45b6b3bfcb76b6379
-  - enabled: 1
+  - enabled: 0
     path: Assets/PlatformerExample/Scenes/MainMenu.unity
     guid: 51cfb96a33c9bf64990e455d6c334f96
-  - enabled: 1
+  - enabled: 0
     path: Assets/PlatformerExample/Scenes/Level01.unity
     guid: f3e36f4824baf4046b0a1d1b891db326
+  - enabled: 1
+    path: Assets/2D Project/Scenes/Menu.unity
+    guid: ce3251eb4b843874cb130a62ade2a1e6
+  - enabled: 1
+    path: Assets/2D Project/Scenes/Bedroom.unity
+    guid: 88b95daa813f7ba42ad9488b97a4c5ac
   m_configObjects: {}
