@@ -27,4 +27,8 @@ public class KidoMovement : MonoBehaviour{
             KidoBody.MovePosition(WalkingDirection);
         }
     }
+
+    void OnDrawGizmos(){
+        
+    }
 }

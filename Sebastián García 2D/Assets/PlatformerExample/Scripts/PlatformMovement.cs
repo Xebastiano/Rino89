@@ -11,7 +11,7 @@ public class PlatformMovement : MonoBehaviour {
 
     public float width { get { return playerCollider.bounds.size.x ; } }
     public float height { get { return playerCollider.bounds.size.y ; } }
-    Vector3 leftCorner { get { return transform.position - (Vector3.right * width / 2); } }
+    Vector3 leftCorner { get { return transform.position + (Vector3.left * width ); } }
     Vector3 rightCorner { get { return transform.position + (Vector3.right * width / 2); } }
 
     float verticalSpeed;
@@ -69,7 +69,7 @@ public class PlatformMovement : MonoBehaviour {
     
     void OnDrawGizmos() {
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(leftCorner,Vector3.down * detectionDistance);
+        Gizmos.DrawRay(leftCorner,Vector3.up * detectionDistance);
         Gizmos.DrawRay(rightCorner,Vector3.down* detectionDistance);
 
         Gizmos.DrawSphere(leftCorner,0.05f);
