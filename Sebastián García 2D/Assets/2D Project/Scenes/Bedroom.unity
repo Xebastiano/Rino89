@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a5f1c91b029ca94d91a694f6811b2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Limits: {x: 50, y: 35}
+  Limits: {x: 20, y: 14}
 --- !u!4 &112845288
 Transform:
   m_ObjectHideFlags: 0
@@ -275,7 +275,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.043209
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -320,12 +320,12 @@ PrefabInstance:
     - target: {fileID: 8403102409184672904, guid: f0c2be2b82da1a646bb7b48cfb0a4551,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.358045
+      value: -5.53
       objectReference: {fileID: 0}
     - target: {fileID: 8403102409184672904, guid: f0c2be2b82da1a646bb7b48cfb0a4551,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.54494834
+      value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: 8403102409184672904, guid: f0c2be2b82da1a646bb7b48cfb0a4551,
         type: 3}
@@ -370,6 +370,21 @@ PrefabInstance:
     - target: {fileID: 8403102409184672904, guid: f0c2be2b82da1a646bb7b48cfb0a4551,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403102409184672904, guid: f0c2be2b82da1a646bb7b48cfb0a4551,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403102409184672911, guid: f0c2be2b82da1a646bb7b48cfb0a4551,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403102409184672911, guid: f0c2be2b82da1a646bb7b48cfb0a4551,
+        type: 3}
+      propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -10,6 +10,7 @@ public class KidoMovement : MonoBehaviour{
     Vector2 KidoLimits { get { return Limits.Limits - ((ColliderSize * transform.localScale) / 2); } }
     Rigidbody2D KidoBody;
     
+    
     // Start is called before the first frame update
     void Start(){
         ColliderSize = gameObject.GetComponent<BoxCollider2D>().size;
@@ -29,6 +30,7 @@ public class KidoMovement : MonoBehaviour{
     }
 
     void OnDrawGizmos(){
-        
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(Vector3.zero,KidoLimits * 2);
     }
 }
