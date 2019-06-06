@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a5f1c91b029ca94d91a694f6811b2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Limits: {x: 20, y: 14}
+  Limits: {x: 10, y: 7}
 --- !u!4 &112845288
 Transform:
   m_ObjectHideFlags: 0

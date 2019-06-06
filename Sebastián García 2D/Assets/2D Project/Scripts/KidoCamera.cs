@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class KidoCamera : MonoBehaviour{
     Vector2 CamSpace;
+    public float CamSpeed;
     public MainScript Limits;
+    public KidoMovement Movement;
     Vector2 CamLimits { get { return Limits.Limits - CamSpace;} }
 
     // Start is called before the first frame update
@@ -14,11 +16,9 @@ public class KidoCamera : MonoBehaviour{
     }
 
     // Update is called once per frame
-    /*void Update(){
-        Vector3 temp = tempTarget ? Vector3.MoveTowards(transform.position,tempSpeed * Time.deltaTime);
-        temp.x = Mathf.Clamp(temp.x,-Limits.x,Limits.x);
-        temp.y = Mathf.Clamp(temp.y,-Limits.y,Limits.y);
-        temp.z = transform.position.z;
-        transform.position = temp;
-    }*/
+    void Update(){
+        if (Movement){
+            Vector3 temp = Vector3.MoveTowards(transform.position, )
+        }
+    }
 }
