@@ -18,7 +18,12 @@ public class KidoCamera : MonoBehaviour{
     // Update is called once per frame
     void Update(){
         if (Movement){
-            Vector3 temp = Vector3.MoveTowards(transform.position, )
+            Vector3 temp = Vector3.MoveTowards (transform.position, Movement.GetComponent<Transform>().position, CamSpeed * Time.deltaTime);
+            temp.x = Mathf.Clamp (temp.x, -CamLimits.x, CamLimits.x);
+            temp.y = Mathf.Clamp (temp.y, -CamLimits.y, CamLimits.y);
+            temp.z = transform.position.z;
+            transform.position = temp;
         }
     }
 }
+//greggman
