@@ -3,6 +3,11 @@ guid: df704ec337479d44c82136159bfa1cfa
 TextureImporter:
   fileIDToRecycleName:
     21300000: tileset_16x16_interior_preview2_0_0
+    21300002: tileset_16x16_interior_preview2_0_1
+    21300004: tileset_16x16_interior_preview2_0_2
+    21300006: tileset_16x16_interior_preview2_0_3
+    21300008: tileset_16x16_interior_preview2_0_4
+    21300010: tileset_16x16_interior_preview2_0_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -100,6 +105,106 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1dff4ad92ef96644390cc9e2507c3a71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_16x16_interior_preview2_0_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 94
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5ffe02d53d0e541ab14a93eb25d76b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_16x16_interior_preview2_0_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02663ccb44f1e9f42873835caf60882e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_16x16_interior_preview2_0_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 85
+        width: 15
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dbf20ad755dba14eb9c071542f427b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_16x16_interior_preview2_0_4
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 203
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bd7d2aae2ba6d4ba3e0a9b44c8b705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_16x16_interior_preview2_0_5
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 203
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584e5c6398182bf4fa144cba267e68f1
       vertices: []
       indices: 
       edges: []

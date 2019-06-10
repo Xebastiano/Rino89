@@ -9,6 +9,7 @@ TagManager:
   - CamArea
   - ExitDoor
   - Platform
+  - Shield
   layers:
   - Default
   - TransparentFX
