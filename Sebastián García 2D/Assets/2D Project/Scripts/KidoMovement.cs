@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class KidoMovement : MonoBehaviour {
 
-    public int WalkingSpeed = 3;
     public MainScript Limits;
+    public Animator KidAnimator;
+    public int WalkingSpeed = 3;
+    public bool Shield;
     Vector2 ColliderSize;
     Vector2 KidoLimits { get { return Limits.Limits - ((ColliderSize * transform.localScale) / 2); } }
     Rigidbody2D KidoBody;
-    public Animator KidAnimator;
-    public bool Shield;
+    Vector2 ShieldShielding;
+
 
 
     // Start is called before the first frame update

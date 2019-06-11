@@ -236,7 +236,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300006, guid: df704ec337479d44c82136159bfa1cfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2502,7 +2502,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300006, guid: df704ec337479d44c82136159bfa1cfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2793,7 +2793,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042133267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5474596, y: 0.1483389, z: 0}
+  m_LocalPosition: {x: 5.43, y: 3.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2809,8 +2809,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1359261285}
   - component: {fileID: 1359261284}
+  - component: {fileID: 1359261286}
   m_Layer: 0
-  m_Name: spritesforyou_0_10
+  m_Name: Peluche
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2878,6 +2879,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1359261286
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359261283}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1522875224
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,7 +3083,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300006, guid: df704ec337479d44c82136159bfa1cfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3162,7 +3189,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300002, guid: df704ec337479d44c82136159bfa1cfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3182,7 +3209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136971433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.51, y: 3.95, z: 0}
+  m_LocalPosition: {x: 7.55, y: 4.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3203,12 +3230,12 @@ PrefabInstance:
     - target: {fileID: 1741025973575824189, guid: 09267da4dc144304eb597353b2c42846,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.42
+      value: 1.53
       objectReference: {fileID: 0}
     - target: {fileID: 1741025973575824189, guid: 09267da4dc144304eb597353b2c42846,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.79
+      value: 5.43
       objectReference: {fileID: 0}
     - target: {fileID: 1741025973575824189, guid: 09267da4dc144304eb597353b2c42846,
         type: 3}
@@ -3218,22 +3245,22 @@ PrefabInstance:
     - target: {fileID: 1741025973575824189, guid: 09267da4dc144304eb597353b2c42846,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1741025973575824189, guid: 09267da4dc144304eb597353b2c42846,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1741025973575824189, guid: 09267da4dc144304eb597353b2c42846,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.71575963
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1741025973575824189, guid: 09267da4dc144304eb597353b2c42846,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.69834673
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1741025973575824189, guid: 09267da4dc144304eb597353b2c42846,
         type: 3}
@@ -3253,7 +3280,7 @@ PrefabInstance:
     - target: {fileID: 1741025973575824189, guid: 09267da4dc144304eb597353b2c42846,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -91.411
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09267da4dc144304eb597353b2c42846, type: 3}
