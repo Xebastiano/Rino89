@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ShieldBehavior : MonoBehaviour{
 
-    public Vector3 ProtectedArea = Vector3.right;
+    public Vector3 ProtectedArea = Vector3.zero;
+    public bool ShieldLaunch;
 
     // Start is called before the first frame update
     void Start(){

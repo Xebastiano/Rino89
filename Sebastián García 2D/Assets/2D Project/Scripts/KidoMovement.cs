@@ -62,6 +62,7 @@ public class KidoMovement : MonoBehaviour {
         if (Shield == true) {
             if (Input.GetMouseButton (0)) {
                 Shielding ();
+                Shield = false;
             }
         }
     }
