@@ -9,7 +9,7 @@ public class KidoMovement : MonoBehaviour {
     public int WalkingSpeed = 3;
     public bool Shield;
     Vector2 ColliderSize;
-    Vector2 KidoLimits { get { return Limits.Limits - ((ColliderSize * transform.localScale) / 2); } }
+    public Vector2 KidoLimits { get { return Limits.Limits - ((ColliderSize * transform.localScale) / 2); } }
     Rigidbody2D KidoBody;
     Vector2 ShieldShielding;
     public Vector2 current2DPos { get { return transform.position; } }

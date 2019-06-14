@@ -2308,18 +2308,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &435459679 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7912205719052218052, guid: 09267da4dc144304eb597353b2c42846,
-    type: 3}
-  m_PrefabInstance: {fileID: 1741025973413073180}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5620e127629f8d842b76ff3fdad3f88a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &588013274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2686,7 +2674,6 @@ MonoBehaviour:
   ShieldSpace: 1.3
   ShieldPrefab: {fileID: 1741025973575824130, guid: 09267da4dc144304eb597353b2c42846,
     type: 3}
-  ShieldLaunch: {fileID: 435459679}
 --- !u!50 &1042133269
 Rigidbody2D:
   serializedVersion: 4
@@ -2869,7 +2856,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300020, guid: f6ac7cd102268f94ba4d00320847a508, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
