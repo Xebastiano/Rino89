@@ -120,4 +120,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaunchSpeed: 3
-  ProtectedArea: {x: 0, y: 0, z: 0}
+  Walls: {fileID: 5484204621206578809, guid: a09e148ae48f9b641a157704aab5588f, type: 3}
+  direction: {x: 0, y: 0, z: 0}

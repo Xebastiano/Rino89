@@ -70,7 +70,7 @@ public class KidoMovement : MonoBehaviour {
     void Shielding (){
         Debug.Log ("Shield!!");
         GameObject shield = Instantiate (ShieldPrefab, current2DPos + (mousePlayerDelta.normalized * ShieldSpace), Quaternion.identity);
-        shield.GetComponent<ShieldBehavior> ().ProtectedArea = mousePlayerDelta.normalized;
+        shield.GetComponent<ShieldBehavior> ().direction = mousePlayerDelta.normalized;
     }
     void OnGUI (){
         GUI.Label (new Rect (10, 10, 100, 50), "MousePos" + ShieldShielding);

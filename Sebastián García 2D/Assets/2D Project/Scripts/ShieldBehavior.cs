@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class ShieldBehavior : MonoBehaviour{
 
-    public float LaunchSpeed = 3.0f;
-    public Vector2 ProtectedArea = Vector2.right;
-    KidoMovement Walls;
+    public int LaunchSpeed = 3;
+    public MainScript Walls;
+    public Vector3 direction = Vector3.right;
     Vector2 collidersize;
-    Vector2 limits {get { return Walls.KidoLimits - (collidersize * transform.localScale) / 2; } }
+    Vector2 position { get { return transform.position; } }
+    Vector2 limits {get { return Walls.Limits - (collidersize * transform.localScale) / 2; } }
 
     // Start is called before the first frame update
     void Start(){
-        
+        collidersize = gameObject.GetComponent<BoxCollider2D>().size;
     }
 
     // Update is called once per frame
     void Update(){
-        Vector2 Moving = ProtectedArea * LaunchSpeed * Time.deltaTime;
-        transform.Translate (Moving);
+        Vector2 Moving = position * LaunchSpeed * Time.deltaTime;
+        Moving.x = Mathf.Clamp(Moving.x, -limits.x, limits.x);
+        Moving.y = Mathf.Clamp(Moving.y, -limits.y, limits.y);
+        transform.Translate(Moving);
     }
 
     private void OnTriggerEnter2D(Collider2D other){
