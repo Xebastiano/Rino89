@@ -122,3 +122,4 @@ MonoBehaviour:
   LaunchSpeed: 3
   Walls: {fileID: 5484204621206578809, guid: a09e148ae48f9b641a157704aab5588f, type: 3}
   direction: {x: 0, y: 0, z: 0}
+  Shield: {fileID: 2948639047690019633, guid: f0c2be2b82da1a646bb7b48cfb0a4551, type: 3}
