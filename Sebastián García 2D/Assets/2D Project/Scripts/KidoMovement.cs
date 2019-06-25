@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class KidoMovement : MonoBehaviour {
 
@@ -73,6 +72,8 @@ public class KidoMovement : MonoBehaviour {
         GameObject shield = Instantiate (ShieldPrefab, current2DPos + (mousePlayerDelta.normalized * ShieldSpace), Quaternion.identity);
         shield.GetComponent<ShieldBehavior> ().direction = mousePlayerDelta.normalized;
     }
+
+
     void OnGUI (){
         GUI.Label (new Rect (10, 10, 100, 50), "MousePos" + ShieldShielding);
     }

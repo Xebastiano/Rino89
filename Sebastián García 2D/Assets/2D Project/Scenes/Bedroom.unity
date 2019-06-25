@@ -3148,6 +3148,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kid
       objectReference: {fileID: 0}
+    - target: {fileID: 2948639047690019638, guid: f0c2be2b82da1a646bb7b48cfb0a4551,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948639047690019633, guid: f0c2be2b82da1a646bb7b48cfb0a4551,
+        type: 3}
+      propertyPath: Limits
+      value: 
+      objectReference: {fileID: 112845287}
     - target: {fileID: 2948639047690019644, guid: f0c2be2b82da1a646bb7b48cfb0a4551,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3203,11 +3213,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2948639047690019633, guid: f0c2be2b82da1a646bb7b48cfb0a4551,
-        type: 3}
-      propertyPath: Limits
-      value: 
-      objectReference: {fileID: 112845287}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c2be2b82da1a646bb7b48cfb0a4551, type: 3}
 --- !u!1001 &5484204621233325982
