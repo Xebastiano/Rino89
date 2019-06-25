@@ -32,21 +32,20 @@ public class ControlledMovement : MovScript {
 
     // Update is called once per frame
     void Update () {
-        //bool grounded = Physics.Raycast(transform.GetChild (0).position, Vector3.down, 0.15f);
         if (!grounded) {
             verticalSpeed -= gravity * Time.deltaTime;
         } else {
             verticalSpeed = persistence ? verticalSpeed - (gravity * Time.deltaTime) : 0;
 
-            if (Input.GetKeyDown (KeyCode.Space)) {
+            if (activeControl && Input.GetKeyDown (KeyCode.Space)) {
                 Debug.Log (verticalSpeed);
                 verticalSpeed = jumpForce;
                 Debug.Log (verticalSpeed);
             }
         }
-        float adelantexd = Input.GetAxis ("Vertical");
-        playerAnimator.SetFloat ("ForwardAxis", adelantexd);
-        Vector3 forwardAxis = transform.forward * speed * adelantexd;
+        float forward = activeControl ? Input.GetAxis ("Vertical") : 0;
+        playerAnimator.SetFloat ("ForwardAxis", forward);
+        Vector3 forwardAxis = transform.forward * speed * forward;
         Vector3 verticalAxis = Vector3.up * verticalSpeed;
         Vector3 horizontal = Vector3.up * Input.GetAxis ("Horizontal");
 

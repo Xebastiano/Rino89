@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TransitionPanel : MonoBehaviour{
+public class TransitionPanel : MonoBehaviour {
 
-    Image Image;
-    public float transitionSpeed = 3.0f;
+    Image image;
+    public float transitionSpeed = 1;
 
     static public TransitionPanel instance;
 
-    void Awake (){
-        if(instance = null) {
+    void Awake () {
+        if (instance == null) {
             DontDestroyOnLoad (transform.parent.gameObject);
             instance = this;
         } else {
@@ -19,22 +19,16 @@ public class TransitionPanel : MonoBehaviour{
         }
     }
 
-    // Start is called before the first frame update
-    public void Initialize(){
-        Image = GetComponent<Image> ();
+    public void Initialize () {
+        image = GetComponent<Image> ();
     }
 
-    // Update is called once per frame
-    void Update(){
-        
-    }
-
-    public IEnumerator FadeAlpha(float targetValue){
+    public IEnumerator FadeAlpha (float targetValue) {
         Color temp;
-        while(Image.color.a != targetValue) {
-            temp = Image.color;
+        while (image.color.a != targetValue) {
+            temp = image.color;
             temp.a = Mathf.MoveTowards (temp.a, targetValue, transitionSpeed * Time.deltaTime);
-            Image.color = temp;
+            image.color = temp;
             yield return null;
         }
     }

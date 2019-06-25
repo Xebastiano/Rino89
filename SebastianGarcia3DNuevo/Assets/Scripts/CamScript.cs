@@ -16,8 +16,9 @@ public class CamScript : MonoBehaviour {
     // Update is called once per frame
     void LateUpdate () {
         if (movingTarget) {
-            transform.position = distancePoint;
-            //transform.rotation = movingTarget.transform.rotation;
+            if (movingTarget.activeControl) {
+                transform.position = distancePoint;
+            }
             transform.LookAt (movingTarget.transform);
         }
     }
