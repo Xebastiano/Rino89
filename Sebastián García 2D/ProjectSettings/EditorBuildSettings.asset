@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/2D Project/Scenes/Bedroom.unity
     guid: 88b95daa813f7ba42ad9488b97a4c5ac
+  - enabled: 1
+    path: Assets/2D Project/Scenes/Pasadiso.unity
+    guid: 898a74ab6ffae5e49a99fa941b14ff58
   m_configObjects: {}

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Doors : MonoBehaviour{
+    public int NextRoom;
     // Start is called before the first frame update
     void Start(){
         
@@ -15,7 +16,7 @@ public class Doors : MonoBehaviour{
     }
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Player"){
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(NextRoom);
         }
     }
 }

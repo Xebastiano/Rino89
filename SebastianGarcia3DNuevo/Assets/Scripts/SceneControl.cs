@@ -32,7 +32,10 @@ public class SceneControl : MonoBehaviour {
         player.activeControl = true;
         panel = TransitionPanel.instance;
         panel.Initialize ();
+        Debug.Log ("(1)" + player.transform.position + "//" + persistentPlayerData.position);
         player.GetComponent<PlayerAtributes> ().Initialize ();
+        Debug.Log ("(2)" + player.transform.position + "//" + persistentPlayerData.position);
+        player.transform.position = Vector3.back;
     }
 
     // Update is called once per frame

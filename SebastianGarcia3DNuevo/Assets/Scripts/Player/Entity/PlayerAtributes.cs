@@ -7,10 +7,11 @@ public class PlayerAtributes : MonoBehaviour {
     public int itemCount { get; private set; }
 
     // Start is called before the first frame update
-    public void Initialize () {
+    public void Initialize () { 
         itemCount = SceneControl.persistentPlayerData.itemCount;
         transform.position = SceneControl.persistentPlayerData.position;
         transform.rotation = SceneControl.persistentPlayerData.rotation;
+        GetComponent<ControlledMovement>
     }
 
     // Update is called once per frame
