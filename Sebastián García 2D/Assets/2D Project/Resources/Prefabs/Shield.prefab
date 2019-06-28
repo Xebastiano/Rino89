@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1741025973575824188}
   - component: {fileID: 1741025973575824131}
   - component: {fileID: 7912205719052218052}
+  - component: {fileID: 2033672589184820252}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Shield
@@ -122,3 +123,24 @@ MonoBehaviour:
   LaunchSpeed: 3
   Walls: {fileID: 5484204621206578809, guid: a09e148ae48f9b641a157704aab5588f, type: 3}
   direction: {x: 0, y: 0, z: 0}
+--- !u!50 &2033672589184820252
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741025973575824130}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

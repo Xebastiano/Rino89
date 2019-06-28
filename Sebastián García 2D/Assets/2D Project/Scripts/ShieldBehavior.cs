@@ -31,8 +31,13 @@ public class ShieldBehavior : MonoBehaviour{
     }
 
     private void OnTriggerEnter2D(Collider2D other){
+        Debug.Log ("1");
         if (other.CompareTag("EnemyBullet")){
             Destroy(other.gameObject);
+        }
+        if (other.CompareTag ("Furniture")) {
+            Debug.Log ("2");
+            LaunchSpeed = 0;
         }
     }
     void OnDrawGizmos (){

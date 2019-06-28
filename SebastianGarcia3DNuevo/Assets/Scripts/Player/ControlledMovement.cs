@@ -6,6 +6,7 @@ public class ControlledMovement : MovScript {
 
     public float gravity;
     public CharacterController characterController;
+    public PlayerAtributes playerAtributes;
     Animator playerAnimator;
     float verticalSpeed;
     public float jumpForce = 10;
@@ -37,10 +38,12 @@ public class ControlledMovement : MovScript {
         } else {
             verticalSpeed = persistence ? verticalSpeed - (gravity * Time.deltaTime) : 0;
 
-            if (activeControl && Input.GetKeyDown (KeyCode.Space)) {
-                Debug.Log (verticalSpeed);
-                //verticalSpeed = jumpForce;
-                //Debug.Log (verticalSpeed);
+            if (activeControl) {
+                Input.GetKeyDown (KeyCode.Space) {
+                    verticalSpeed = jumpForce;
+                } else if (Input.GetKeyDown(KeyCode E)) {
+
+                }
             }
         }
         float forward = activeControl ? Input.GetAxis ("Vertical") : 0;
@@ -56,8 +59,7 @@ public class ControlledMovement : MovScript {
     }
 
     void OnCollisionStay (Collision collision) {
-        //Debug.Log ("Collided " + collision.collider.name + " " + groundCount + "/" + persistence);
-        //Debug.DrawRay (collision.contacts[0].point, collision.contacts[0].normal, Color.red);
+        Debug.DrawRay (collision.contacts[0].point, collision.contacts[0].normal, Color.red);
 
         for (int i = 0; i < collision.contactCount; i++) {
             if (Vector3.Dot (collision.contacts[i].normal, Vector3.up) > 0.8) {
@@ -75,7 +77,7 @@ public class ControlledMovement : MovScript {
             groundCollection.Remove (exitGround);
             StartCoroutine (RecheckPersistance ());
         }
-        //Debug.Log (persistence);
+        Debug.Log (persistence);
     }
 
     void OnDrawGizmos () {

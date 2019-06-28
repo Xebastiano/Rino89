@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlayerAtributes : MonoBehaviour {
 
     public int itemCount { get; private set; }
+    public Activator targetActivator;
 
     // Start is called before the first frame update
-    public void Initialize () { 
+    public void Initialize () {
         itemCount = SceneControl.persistentPlayerData.itemCount;
-        transform.position = SceneControl.persistentPlayerData.position;
-        transform.rotation = SceneControl.persistentPlayerData.rotation;
-        GetComponent<ControlledMovement>
+        transform.position = SceneControl.persistentPlayerData.pointData.position;
+        transform.rotation = SceneControl.persistentPlayerData.pointData.rotation;
+        GetComponent<ControlledMovement> ().characterController.enabled = true;
     }
 
     // Update is called once per frame
@@ -23,7 +24,9 @@ public class PlayerAtributes : MonoBehaviour {
         if (other.CompareTag("Item")) {
             itemCount++;
         } else if (other.CompareTag("Checkpoint")) {
-            SceneControl.persistentPlayerData.SetData (itemCount, other.transform.position + Vector3.up, other.transform.rotation);
+            Checkpoint checkpoint = other.GetComponent<Checkpoint> ();
+            SceneControl.persistentPlayerData.SetAllData (itemCount, checkpoint.pointData);
+            FindObjectOfType<CheckpointControl> ().SetCurrentActive (checkpoint);
         }
     }
 }
