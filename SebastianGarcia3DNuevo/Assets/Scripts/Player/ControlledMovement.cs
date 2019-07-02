@@ -39,10 +39,10 @@ public class ControlledMovement : MovScript {
             verticalSpeed = persistence ? verticalSpeed - (gravity * Time.deltaTime) : 0;
 
             if (activeControl) {
-                Input.GetKeyDown (KeyCode.Space) {
+                if (Input.GetKeyDown (KeyCode.Space)) {
                     verticalSpeed = jumpForce;
-                } else if (Input.GetKeyDown(KeyCode E)) {
-
+                } else if (Input.GetKeyDown (KeyCode.E) && playerAtributes.targetActivator) {
+                    playerAtributes.targetActivator.Activate ();
                 }
             }
         }
