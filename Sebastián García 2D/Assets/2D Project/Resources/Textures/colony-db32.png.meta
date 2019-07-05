@@ -3,6 +3,7 @@ guid: 0af712deb03f0ec4999d04ec1ce925c2
 TextureImporter:
   fileIDToRecycleName:
     21300000: colony-db32_0
+    21300002: colony-db32_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -100,6 +101,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: acbb2057627c0c141853a2ad4b2ec254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colony-db32_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584ad7534d0791d4e9831c5ec9a715f0
       vertices: []
       indices: 
       edges: []
