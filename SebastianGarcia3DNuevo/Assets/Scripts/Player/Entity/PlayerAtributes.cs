@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GameUtility;
+using GameUtilities;
 
 public class PlayerAtributes : MonoBehaviour {
 
@@ -11,8 +11,8 @@ public class PlayerAtributes : MonoBehaviour {
     // Start is called before the first frame update
     public void Initialize () {
         itemCount = SceneControl.persistentPlayerData.itemCount;
-        transform.position = SceneControl.persistentPlayerData.pointData.position;
-        transform.rotation = SceneControl.persistentPlayerData.pointData.rotation;
+        transform.position = SceneControl.persistentPlayerData.pointData.position.ToVector3 ();
+        transform.rotation = SceneControl.persistentPlayerData.pointData.rotation.ToQuaternion ();
         GetComponent<ControlledMovement> ().characterController.enabled = true;
     }
 
@@ -27,7 +27,7 @@ public class PlayerAtributes : MonoBehaviour {
         } else if (other.CompareTag("Checkpoint")) {
             Checkpoint checkpoint = other.GetComponent<Checkpoint> ();
             SceneControl.persistentPlayerData.SetAllData (itemCount, checkpoint.pointData);
-            DataManagment.WriteDataToFile (SceneControl.persistentPlayerData);
+            DataManagement.WriteDataToFile (SceneControl.persistentPlayerData);
             FindObjectOfType<CheckpointControl> ().SetCurrentActive (checkpoint);
         }
     }

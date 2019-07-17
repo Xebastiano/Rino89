@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using GameUtility;
+using GameUtilities;
 
 [System.Serializable]
 public struct PointData {
-    public Vector3 position { get; private set; }
-    public Quaternion rotation { get; private set; }
+    public float[] position { get; private set; }
+    public float[] rotation { get; private set; }
 
-    public PointData (Vector3 position, Quaternion rotation) {
+    public PointData (float[] position, float[] rotation) {
         this.position = position;
         this.rotation = rotation;
     }
@@ -24,7 +24,7 @@ public class ScenePlayerData {
         this.itemCount = itemCount;
         this.pointData = pointData;
     }
-    public void SetAllData (int itemCount, Vector3 position, Quaternion rotation) {
+    public void SetAllData (int itemCount, float[] position, float[] rotation) {
         this.itemCount = itemCount;
         this.pointData = new PointData (position, rotation);
     }
@@ -40,13 +40,13 @@ public class SceneControl : MonoBehaviour {
     // Start is called before the first frame update
     void Start () {
         if (persistentPlayerData == null) {
-            object readData = DataManagment.ReadDataFromFile ();
+            object readData = DataManagement.ReadDataFromFile ();
             if (readData != null) {
                 persistentPlayerData = (ScenePlayerData)readData;
             } else {
                 persistentPlayerData = new ScenePlayerData ();
-                persistentPlayerData.SetAllData (0, startPoint, Quaternion.identity);
-                DataManagment.WriteDataToFile (persistentPlayerData);
+                persistentPlayerData.SetAllData (0, startPoint.UnityToFloatArray (), Quaternion.identity.UnityToFloatArray ());
+                DataManagement.WriteDataToFile (persistentPlayerData);
             }
         }
         player = GameObject.FindGameObjectWithTag ("Player").GetComponent<MovScript> ();

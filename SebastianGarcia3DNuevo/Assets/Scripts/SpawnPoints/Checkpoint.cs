@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameUtilities;
 
 public class Checkpoint : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class Checkpoint : MonoBehaviour {
 
     // Awake is called before the first frame update AND THE START :D
     void Awake () {
-        pointData = new PointData (transform.position + Vector3.up, transform.rotation);
+        pointData = new PointData ((transform.position + Vector3.up).UnityToFloatArray (), transform.rotation.UnityToFloatArray ());
     }
 
     public void Activate (bool setActive) {
