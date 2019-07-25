@@ -517,6 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abaa00e855376254c971f918e658616f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnData: {fileID: 4900000, guid: d2f90710cc615ea4da09c333c7b7c78d, type: 3}
   spawnDelay: 3
 --- !u!1 &928663081
 GameObject:
