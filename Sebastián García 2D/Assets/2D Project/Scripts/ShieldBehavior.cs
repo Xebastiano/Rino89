@@ -30,7 +30,7 @@ public class ShieldBehavior : MonoBehaviour{
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other){
+    void OnTriggerEnter2D(Collider2D other){
         Debug.Log ("1");
         if (other.CompareTag("EnemyBullet")){
             Destroy(other.gameObject);
@@ -39,6 +39,10 @@ public class ShieldBehavior : MonoBehaviour{
             Debug.Log ("2");
             LaunchSpeed = 0;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision other){
+        Debug.Log("5");
     }
     void OnDrawGizmos (){
         Gizmos.color = Color.blue;
