@@ -204,8 +204,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: aa43a95ba1167b343bb0cc6be96e1d32, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300002, guid: 0af712deb03f0ec4999d04ec1ce925c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -224,7 +224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368235058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.6, y: 1.9, z: 0}
+  m_LocalPosition: {x: -11.51, y: 2.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -547,7 +547,7 @@ PrefabInstance:
     - target: {fileID: 1741025973575824131, guid: 09267da4dc144304eb597353b2c42846,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7912205719052218052, guid: 09267da4dc144304eb597353b2c42846,
         type: 3}
@@ -767,6 +767,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5484204621206578808, guid: a09e148ae48f9b641a157704aab5588f,
+        type: 3}
+      propertyPath: m_Name
+      value: RoomCotroler
+      objectReference: {fileID: 0}
     - target: {fileID: 5484204621206578809, guid: a09e148ae48f9b641a157704aab5588f,
         type: 3}
       propertyPath: Limits.x
@@ -776,11 +781,6 @@ PrefabInstance:
         type: 3}
       propertyPath: Limits.y
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5484204621206578808, guid: a09e148ae48f9b641a157704aab5588f,
-        type: 3}
-      propertyPath: m_Name
-      value: RoomCotroler
       objectReference: {fileID: 0}
     - target: {fileID: 5484204621206578806, guid: a09e148ae48f9b641a157704aab5588f,
         type: 3}
