@@ -3,6 +3,7 @@ guid: 800a38a86b973ff4da10e918540c714a
 TextureImporter:
   fileIDToRecycleName:
     21300000: open_tileset_0
+    21300002: open_tileset_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -100,6 +101,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: adbab4805cf1e9c46bf0474571322c92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: open_tileset_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 35
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6618a704ae0bb1049b21f68d3763fce1
       vertices: []
       indices: 
       edges: []

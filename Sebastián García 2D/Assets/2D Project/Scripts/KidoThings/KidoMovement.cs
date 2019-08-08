@@ -43,6 +43,7 @@ public class KidoMovement : MonoBehaviour {
             Destroy(other.gameObject);
             Shield = true;
         }
+
     }
 
     public void ControlledFixedUpdate(){

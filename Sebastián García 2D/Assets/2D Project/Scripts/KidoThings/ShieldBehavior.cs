@@ -41,9 +41,6 @@ public class ShieldBehavior : MonoBehaviour{
         }
     }
 
-    private void OnCollisionEnter2D(Collision other){
-        Debug.Log("5");
-    }
     void OnDrawGizmos (){
         Gizmos.color = Color.blue;
         Gizmos.DrawWireCube (Vector3.zero, limits * 2);
