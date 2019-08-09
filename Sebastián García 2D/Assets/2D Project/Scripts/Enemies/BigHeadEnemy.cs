@@ -8,6 +8,7 @@ public class BigHeadEnemy : MonoBehaviour{
     public float ChargeSpeed = 1;
     int ChargeDirection = 1;
     int Direction = 0;
+    Vector2 BigHead;
 
     // Start is called before the first frame update
     void Start(){
@@ -20,7 +21,7 @@ public class BigHeadEnemy : MonoBehaviour{
         if (transform.position == ChangeDirection[Direction]){
             Direction += ChargeDirection;
             if (Direction >= ChangeDirection.Length || Direction < 0){
-                Destroy
+                
             }
         }
     }
