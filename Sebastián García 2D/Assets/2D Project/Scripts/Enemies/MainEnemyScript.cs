@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainEnemyScript : MonoBehaviour
-{
+public class MainEnemyScript : MonoBehaviour{
+
+    public bool TouchingPLayer = false;
+
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Player")){
+            Debug.Log("hola");
+            TouchingPLayer = true;
+        }
     }
 }

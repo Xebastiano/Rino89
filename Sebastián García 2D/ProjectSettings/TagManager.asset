@@ -11,6 +11,7 @@ TagManager:
   - Platform
   - Shield
   - Furniture
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

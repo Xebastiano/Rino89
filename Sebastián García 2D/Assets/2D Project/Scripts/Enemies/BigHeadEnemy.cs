@@ -8,7 +8,8 @@ public class BigHeadEnemy : MonoBehaviour{
     public float ChargeSpeed = 1;
     int ChargeDirection = 1;
     int Direction = 0;
-    Vector2 BigHead;
+
+    public MainEnemyScript getActive;
 
     // Start is called before the first frame update
     void Start(){
@@ -17,11 +18,13 @@ public class BigHeadEnemy : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        transform.position = Vector3.MoveTowards(transform.position, ChangeDirection[Direction], ChargeSpeed * Time.deltaTime);
-        if (transform.position == ChangeDirection[Direction]){
-            Direction += ChargeDirection;
-            if (Direction >= ChangeDirection.Length || Direction < 0){
-                
+        if (getActive.TouchingPLayer == true){
+            transform.position = Vector3.MoveTowards(transform.position, ChangeDirection[Direction], ChargeSpeed * Time.deltaTime);
+            if (transform.position == ChangeDirection[Direction]){
+                Direction += ChargeDirection;
+                if (Direction >= ChangeDirection.Length || Direction < 0){
+                    Destroy(gameObject);
+                }
             }
         }
     }

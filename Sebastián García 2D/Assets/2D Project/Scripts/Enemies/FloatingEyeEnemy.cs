@@ -2,17 +2,67 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloatingEyeEnemy : MonoBehaviour
-{
+public class FloatingEyeEnemy : MonoBehaviour{
+    public Vector3[] ChangeDirection;
+    public float ChargeSpeed = 1;
+    int ChargeDirection = 1;
+    int Direction = 0;
+
+    public MainEnemyScript getActive;
+
+    public GameObject MagicShootPrefab;
+
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start(){
+
     }
 
     // Update is called once per frame
-    void Update()
+    void Update(){
+        if (getActive.TouchingPLayer == true){
+            transform.position = Vector3.MoveTowards(transform.position, ChangeDirection[Direction], ChargeSpeed * Time.deltaTime);
+            if (transform.position == ChangeDirection[Direction]){
+                Direction += ChargeDirection;
+                if (Direction >= ChangeDirection.Length || Direction < 0){
+                    StartCoroutine(Charging());
+                    if (transform.position == ChangeDirection[1]){
+                        Shoot();
+                        
+                    }
+                    ChargeDirection *= -1;
+                    Direction += ChargeDirection;
+                }
+            }
+        }
+    }
+
+    void Reset()
     {
-        
+        ChangeDirection = new Vector3[1];
+        ChangeDirection[0] = transform.position;
+    }
+
+    void Shoot(){
+        Instantiate(MagicShootPrefab, transform.position, Quaternion.identity);
+    }
+
+    void OnDrawGizmos(){
+        Gizmos.color = Color.green;
+        for (int i = 0; i < ChangeDirection.Length; i++){
+            if ((i + 1) < ChangeDirection.Length){
+                Gizmos.DrawLine(ChangeDirection[i], ChangeDirection[i + 1]);
+            }
+        }
+        Gizmos.color = Color.red;
+        for (int i = 0; i < ChangeDirection.Length; i++){
+            Gizmos.DrawSphere(ChangeDirection[i], 0.15f);
+        }
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawRay(transform.position, transform.up);
+        Gizmos.DrawRay(transform.position, transform.right);
+    }
+
+    IEnumerator Charging(){
+        yield return new WaitForSeconds(1);
     }
 }
