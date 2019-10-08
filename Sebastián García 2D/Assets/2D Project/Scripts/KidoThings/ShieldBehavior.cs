@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class ShieldBehavior : MonoBehaviour{
 
-    public int LaunchSpeed = 3;
+    public float LaunchSpeed = 3;
     public MainScript Walls;
     public Vector3 direction = Vector3.zero;
     Vector2 collidersize;
     Vector2 limits {get { return Walls.Limits - (collidersize * transform.localScale) / 2; } }
+
+    
+    public float BackingSpeed;
 
     // Start is called before the first frame update
     void Start(){
@@ -34,7 +37,8 @@ public class ShieldBehavior : MonoBehaviour{
         Debug.Log("1");
         if (other.CompareTag("EnemyBullet")) {
             Destroy(other.gameObject);
-            LaunchSpeed = 0;
+                LaunchSpeed = LaunchSpeed - 0.5f;
+            
         }
         if (other.CompareTag("Furniture")) {
             Debug.Log("2");

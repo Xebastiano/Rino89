@@ -43,7 +43,17 @@ public class KidoMovement : MonoBehaviour {
             Destroy(other.gameObject);
             Shield = true;
         }
+        if (other.CompareTag("MaxCam")){
+            MaxCamera maxCam = other.GetComponent<MaxCamera>();
+            Camera.main.GetComponent<KidoCamera>().SetTempTarget(maxCam.transform, maxCam.CenterSpeed, maxCam.targetSize);
+        }
 
+    }
+
+    private void OnTriggerExit2D(Collider2D other){
+        if (other.CompareTag("MaxCam")){
+            Camera.main.GetComponent<KidoCamera>().SetTempTarget();
+        }
     }
 
     public void ControlledFixedUpdate(){

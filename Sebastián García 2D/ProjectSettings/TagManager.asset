@@ -12,6 +12,7 @@ TagManager:
   - Shield
   - Furniture
   - EnemyBullet
+  - MaxCam
   layers:
   - Default
   - TransparentFX
