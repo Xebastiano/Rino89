@@ -13,6 +13,7 @@ TagManager:
   - Furniture
   - EnemyBullet
   - MaxCam
+  - Button
   layers:
   - Default
   - TransparentFX

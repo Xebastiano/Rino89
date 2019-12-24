@@ -13,6 +13,8 @@ public class ShieldBehavior : MonoBehaviour{
     
     public float BackingSpeed;
 
+    public KidoMovement KidPos;
+
     // Start is called before the first frame update
     void Start(){
         collidersize = gameObject.GetComponent<BoxCollider2D>().size;
@@ -20,16 +22,21 @@ public class ShieldBehavior : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
+        if (LaunchSpeed > 0){
+            Vector2 Moving = direction * LaunchSpeed * Time.deltaTime;
+            Vector2 position = transform.position;
+            position += Moving;
 
-        Vector2 Moving = direction * LaunchSpeed * Time.deltaTime;
+            position.x = Mathf.Clamp(position.x, -limits.x, limits.x);
+            position.y = Mathf.Clamp(position.y, -limits.y, limits.y);
 
-        Vector2 position = transform.position;
-        position += Moving;
+            transform.position = position;
+        }
 
-        position.x = Mathf.Clamp (position.x, -limits.x, limits.x);
-        position.y = Mathf.Clamp (position.y, -limits.y, limits.y);
-
-        transform.position = position;
+        if (LaunchSpeed < 0){
+            Vector3 temp = Vector3.MoveTowards(transform.position, KidPos.GetComponent<Transform>().position, -LaunchSpeed * Time.deltaTime);
+            transform.position = temp;
+        }
         
     }
 
@@ -47,6 +54,7 @@ public class ShieldBehavior : MonoBehaviour{
         if (other.CompareTag("enemy")){
             Destroy(other.gameObject);
             LaunchSpeed = 0;
+            Walls.remainingEnemies = Walls.remainingEnemies - 1;
         }
     }
 

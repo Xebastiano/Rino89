@@ -10,6 +10,7 @@ public class KidoCamera : MonoBehaviour{
     Vector2 CamLimits { get { return Limits.Limits - CamSpace;} }
 
     Vector2 tempCamSpace { get{ return tempTarget.position; } }
+    
     Transform tempTarget;
     float tempSpeed;
 
@@ -38,6 +39,7 @@ public class KidoCamera : MonoBehaviour{
     }
 
     public void SetTempTarget (Transform target = null, float speed = 0, float size = 4) {
+        
         tempTarget = target;
         tempSpeed = speed;
         targetOrtographicSize = size;
